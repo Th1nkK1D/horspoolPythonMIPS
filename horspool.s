@@ -86,7 +86,7 @@ main:
                 add $t5,$t5,$t8     # i = i + (m - 1)
 
 
-        subi $t7,$t3,2              # occ = m - 2
+        addi $t7,$t3,-2             # occ = m - 2
 
         loopocc:
             slt $t8,$0,$t7          # t8 = 0 < occ
@@ -96,7 +96,7 @@ main:
             lb $t9,0($t9)           # t8 = pattern[occ]
             lb $t0,0($t0)           # t7 = text[i]
             beq $t9,$t0,endloopocc  # if t8 = t7 go to endloop
-            subi $t7,$t7,1          # if so occ = occ - 1
+            addi $t7,$t7,-1         # if so occ = occ - 1
             j loopocc
         endloopocc:
         sub $t5,$t5,$t7             # i = i - occ

@@ -34,7 +34,7 @@ main:
     la $a0, str1					# load text from str1 to a0
     syscall							# print "Enter Text: "
     addi $v0, $zero, 8				# v0 = 8
-    la $a0, text 					# laod space of array into a0
+    la $a0, text 					# load space of array into a0
     addi $a1 , $0 , 256				# set maximum of array 
     add $t1, $a0 , $0				# t1 = a0
     syscall							# Get source from user
@@ -45,7 +45,7 @@ main:
     addi $v0, $zero, 8				# v0 = 8
     la $a0, pattern					# laod space of array into a0
     addi $a1,$0, 256				# set maximum of array 
-    add $t2 , $a0 , $0				#t2 = a0
+    add $t2 , $a0 , $0				# t2 = a0
     syscall 						# Get source from user
     
     

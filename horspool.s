@@ -89,8 +89,8 @@ main:
         addi $t7,$t3,-2                 # occ = m - 2
 
         loopocc:
-            slt $t8,$0,$t7                  # t8 = 0 < occ
-            beq $t8,$0,endloopocc           # if t8 = 0 mean 0 >= occ go to endloop
+            slt $t8,$t7,$0                  # t8 = 0 > occ
+            bne $t8,$0,endloopocc           # if t8 = 0 mean 0 < occ go to endloop
             add $t9,$t2,$t7                 # t9 = &pattern[0] + occ , &pattern[occ]
             add $t0,$t1,$t5                 # t10 = &text[0] + t10 , &text[i]
             lb $t9,0($t9)                   # t8 = pattern[occ]

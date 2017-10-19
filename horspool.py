@@ -33,7 +33,7 @@ while i <= n-m:
     # Find occ
     occ = m - 2
 
-    while occ > 0:
+    while occ >= 0:
         if pattern[occ] == text[i]:
             break
         occ = occ-1
